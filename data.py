@@ -11,11 +11,11 @@ import itertools
 
 __author__ = 'buriburisuri@gmail.com'
 __vocabulary_save_dir__ = "asset/train/"
-
+__data_path__ = "../data/VCTK-Corpus/"
 
 class VCTK(object):
 
-    def __init__(self, batch_size=16, data_path='asset/data/', vocabulary_loading=False):
+    def __init__(self, batch_size=16, data_path=__data_path__, vocabulary_loading=False):
 
         @tf.sg_producer_func
         def _load_mfcc(src_list):
